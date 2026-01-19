@@ -1,6 +1,52 @@
 @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap');
 @import url('https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700&display=swap');
 
+:root {
+    /* Light Mode Variables */
+    --bg-body: #FFFFFF;
+    --bg-nav: #FFFFFF;
+    --bg-hero: #EEF5FF;
+    --bg-section: #FFFFFF;
+    --bg-card: #F6F7F9;
+    --bg-footer: #0F172A;
+    --bg-footer-card: #1E293B;
+
+    --text-primary: #121923;
+    --text-secondary: #4B5462;
+    --text-inverse: #FFFFFF;
+    --text-hero-title: #000000;
+
+    --accent-primary: #3B82F6;
+    --accent-gradient-start: #0EA5E9;
+    --accent-gradient-mid: #2395EF;
+
+    --border-color: #E9EAEB;
+    --card-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --nav-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+[data-theme="dark"] {
+    /* Dark Mode Variables */
+    --bg-body: linear-gradient(90deg, #09090B 0%, #17181A 100%);
+    --bg-nav: #17181A;
+    --bg-hero: transparent;
+    --bg-section: transparent;
+    --bg-card: #1E293B;
+    --bg-footer: #020617;
+    /* Even darker for footer in dark mode */
+    --bg-footer-card: #1E293B;
+
+    --text-primary: #FFFFFF;
+    --text-secondary: #94A3B8;
+    --text-inverse: #FFFFFF;
+    --text-hero-title: #FFFFFF;
+
+    --accent-primary: #3B82F6;
+    --border-color: #334155;
+    --card-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    --nav-shadow: 0 1px 2px rgba(255, 255, 255, 0.05);
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -9,6 +55,12 @@
 
 body {
     font-family: 'Satoshi', sans-serif;
+    background: var(--bg-body);
+    background-attachment: fixed;
+    /* Ensures gradient covers full height properly */
+    color: var(--text-primary);
+    transition: background 0.3s ease, color 0.3s ease;
+    min-height: 100vh;
 }
 
 h1,
@@ -23,15 +75,40 @@ h6 {
 .navbar {
     width: 100%;
     height: 80px;
-    /* Slightly taller for better breathability */
-    background-color: #fff;
+    background-color: var(--bg-nav);
     display: flex;
     padding: 0 80px;
-    /* Horizontal padding, height handled by flex center */
     justify-content: space-between;
     align-items: center;
-    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
-    /* Subtle depth */
+    box-shadow: var(--nav-shadow);
+    transition: background-color 0.3s ease;
+}
+
+#theme-toggle {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 8px;
+    color: var(--text-primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: background-color 0.3s ease;
+}
+
+#theme-toggle:hover {
+    background-color: var(--bg-card);
+}
+
+#theme-toggle svg {
+    width: 24px;
+    height: 24px;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
 }
 
 .nav-logo {
@@ -58,7 +135,7 @@ h6 {
 
 .nav-links a {
     text-decoration: none;
-    color: #121923;
+    color: var(--text-primary);
     font-weight: 600;
     font-size: 16px;
     transition: color 0.2s ease;
@@ -73,7 +150,7 @@ h6 {
 .hero-section {
     width: 100%;
     /* min-height: calc(100vh - 80px); */
-    background-color: #EEF5FF;
+    background-color: var(--bg-hero);
     /* Light blue tint matching the image */
     display: flex;
     flex-direction: column;
@@ -81,6 +158,7 @@ h6 {
     justify-content: center;
     padding: 120px 20px;
     text-align: center;
+    transition: background-color 0.3s ease;
 }
 
 /* Status Badge */
@@ -139,8 +217,9 @@ h6 {
 .hero-title {
     font-size: 48px;
     line-height: 60px;
-    font-weight: 00;
-    color: #000;
+    font-weight: 800;
+    /* Corrected typo 00 -> 800 */
+    color: var(--text-hero-title);
     margin-bottom: 24px;
     letter-spacing: -0.02em;
 }
@@ -155,7 +234,7 @@ h6 {
 .hero-subtitle {
     font-size: 18px;
     line-height: 24px;
-    color: #4B5462;
+    color: var(--text-secondary);
     max-width: 600px;
     margin-bottom: 24px;
     font-weight: 500;
@@ -229,9 +308,9 @@ h6 {
 .btn-outline {
     width: 122px;
     height: 38px;
-    background-color: #FFFFFF;
-    color: #18212F;
-    border: 1px solid #1E293B;
+    background-color: var(--bg-body);
+    color: var(--text-primary);
+    border: 1px solid var(--text-primary);
     padding: 8px 16px;
     gap: 10px;
 }
@@ -263,9 +342,10 @@ h6 {
 /* About Section */
 .about-section {
     padding: 100px 80px;
-    background-color: #fff;
+    background-color: var(--bg-section);
     max-width: 1200px;
     margin: 0 auto;
+    transition: background-color 0.3s ease;
 }
 
 .section-title {
@@ -277,7 +357,7 @@ h6 {
     font-size: 40px;
     line-height: 48px;
     font-weight: 800;
-    color: #000;
+    color: var(--text-primary);
     margin-bottom: 4px;
 }
 
@@ -305,7 +385,7 @@ h6 {
     font-size: 28px;
     line-height: 38px;
     font-weight: 800;
-    color: #121923;
+    color: var(--text-primary);
     margin-bottom: 24px;
 }
 
@@ -313,7 +393,7 @@ h6 {
     font-size: 16px;
     line-height: 24px;
     font-weight: 500;
-    color: #4B5462;
+    color: var(--text-secondary);
     margin-bottom: 16px;
 }
 
@@ -322,9 +402,9 @@ h6 {
 }
 
 .about-card {
-    color: #4B5462;
+    color: var(--text-secondary);
     flex: 0.8;
-    background-color: #F6F7F9;
+    background-color: var(--bg-card);
     border-radius: 16px;
     padding: 40px;
     display: flex;
@@ -396,7 +476,7 @@ h6 {
     font-size: 18px;
     font-weight: 600;
     line-height: 24px;
-    color: #4B5462;
+    color: var(--text-secondary);
 }
 
 /* Stats Grid */
@@ -411,7 +491,7 @@ h6 {
 .stat-card {
     width: 236px;
     height: 148px;
-    background-color: #F6F7F9;
+    background-color: var(--bg-card);
     border-radius: 15px;
     padding: 16px;
     display: flex;
@@ -426,10 +506,10 @@ h6 {
 }
 
 .stat-card:hover {
-    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1), 0px 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: var(--card-shadow);
     transform: translateY(-2px);
     /* Subtle lift to match shadow depth */
-    background-color: #F6F7F9;
+    background-color: var(--bg-card);
     /* Ensure background stays same */
 }
 
@@ -450,7 +530,7 @@ h6 {
     font-size: 20px;
     line-height: 24px;
     text-align: center;
-    color: #121923;
+    color: var(--text-primary);
     margin: 0;
 }
 
@@ -461,7 +541,7 @@ h6 {
     font-size: 18px;
     line-height: 24px;
     text-align: center;
-    color: #4B5462;
+    color: var(--text-secondary);
     margin: 0;
 }
 
@@ -470,15 +550,16 @@ h6 {
     padding: 100px 80px;
     /* background-color: #F8F9FA; */
     /* Very light grey background */
-    background-color: #F6F7F9;
+    background-color: var(--bg-card);
     width: 100%;
     /* max-width: 1200px; */
     /* margin: 0 auto; */
+    transition: background-color 0.3s ease;
 }
 
 .section-subtitle {
     margin-top: 16px;
-    color: #121923;
+    color: var(--text-secondary);
     font-size: 18px;
     line-height: 24px;
     font-weight: 500;
@@ -494,7 +575,7 @@ h6 {
 .project-card {
     display: flex;
     flex-direction: column;
-    background-color: white;
+    background-color: var(--bg-section);
     border-radius: 12px;
     overflow: hidden;
     /* border: 1px solid #E5E7EB; */
@@ -502,7 +583,7 @@ h6 {
     height: auto;
 
     position: relative;
-    border: 1px solid #E9EAEB;
+    border: 1px solid var(--border-color);
     /* From design */
 }
 
@@ -547,7 +628,7 @@ h6 {
     font-size: 20px;
     line-height: 28px;
     font-weight: 800;
-    color: #121923;
+    color: var(--text-primary);
     margin-bottom: 12px;
     font-family: 'Manrope', sans-serif;
 }
@@ -555,7 +636,7 @@ h6 {
 .project-content p {
     font-size: 16px;
     line-height: 20px;
-    color: #4B5462;
+    color: var(--text-secondary);
     margin-bottom: 24px;
     font-family: 'Satoshi', sans-serif;
     font-weight: 500;
@@ -586,7 +667,7 @@ h6 {
 }
 
 .project-tags span {
-    background: #F6F7F9;
+    background: var(--bg-card);
     border-radius: 99px;
     padding: 6px 16px;
     font-family: 'Satoshi', sans-serif;
@@ -594,14 +675,14 @@ h6 {
     font-weight: 700;
     font-size: 16px;
     line-height: 24px;
-    color: #121923;
+    color: var(--text-primary);
     white-space: nowrap;
     cursor: pointer;
     transition: background-color 0.2s ease;
 }
 
 .project-tags span:hover {
-    background: #D2D4D8;
+    background: var(--border-color);
 }
 
 .projects-action {
@@ -619,9 +700,10 @@ h6 {
 /* Skills Section */
 .skills-section {
     padding: 100px 80px;
-    background-color: #fff;
+    background-color: var(--bg-section);
     /* max-width: 1200px; */
     /* margin: 0 auto; */
+    transition: background-color 0.3s ease;
 }
 
 .skills-grid {
@@ -631,7 +713,7 @@ h6 {
 }
 
 .skill-card {
-    background-color: #F6F7F9;
+    background-color: var(--bg-card);
     border-radius: 15px;
     padding: 24px;
     transition: all 0.3s ease;
@@ -676,7 +758,7 @@ h6 {
     font-size: 20px;
     font-weight: 800;
     line-height: 28px;
-    color: #121923;
+    color: var(--text-primary);
     margin-bottom: 12px;
     /* Add margin to separate title */
     font-family: 'Manrope', sans-serif;
@@ -686,7 +768,7 @@ h6 {
     font-size: 16px;
     line-height: 24px;
     font-weight: 500;
-    color: #4B5462;
+    color: var(--text-secondary);
     margin-bottom: 0;
     font-family: 'Satoshi', sans-serif;
 }
@@ -717,7 +799,7 @@ h6 {
     max-height: 300px;
     /* Arbitrary height to allow content */
     opacity: 1;
-    color: #1E293B;
+    color: var(--text-primary);
     margin-bottom: 24px;
     transition-delay: 0.1s;
     /* Slight delay for smooth sequence */
@@ -740,13 +822,13 @@ h6 {
 }
 
 .skill-tags span {
-    background-color: #FFFFFF;
+    background-color: var(--bg-section);
     padding: 6px 16px;
     border-radius: 99px;
     font-size: 15px;
     font-weight: 700;
     line-height: 20px;
-    color: #121923;
+    color: var(--text-primary);
     box-shadow: none;
     font-family: 'Satoshi', sans-serif;
     transition: all 0.2s ease;
@@ -859,4 +941,161 @@ h6 {
 .footer-bottom p {
     color: #64748B;
     font-size: 14px;
+}
+
+/* Responsive Design (Mobile) */
+@media screen and (max-width: 768px) {
+
+    /* Typography */
+    h1 {
+        font-size: 36px;
+    }
+
+    h2 {
+        font-size: 32px;
+    }
+
+    h3 {
+        font-size: 24px;
+    }
+
+    /* Navbar */
+    .navbar {
+        height: auto;
+        padding: 20px;
+        flex-direction: row;
+        /* Keep row for toggle */
+        flex-wrap: wrap;
+        /* efficient wrapping */
+        gap: 20px;
+    }
+
+    .nav-links {
+        width: 100%;
+        order: 3;
+        /* Move links to bottom on mobile */
+        justify-content: center;
+        gap: 20px;
+        flex-wrap: wrap;
+    }
+
+    .nav-logo {
+        flex: 1;
+    }
+
+    /* Sections General */
+    .section-title {
+        margin-bottom: 40px;
+    }
+
+    .section-title h2 {
+        font-size: 32px;
+        line-height: 40px;
+    }
+
+    /* Hero Section */
+    .hero-section {
+        padding: 80px 20px;
+    }
+
+    .hero-title {
+        font-size: 36px;
+        line-height: 44px;
+    }
+
+    .hero-subtitle {
+        font-size: 16px;
+        padding: 0 10px;
+    }
+
+    .hero-actions {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .btn {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    /* About Section */
+    .about-section {
+        padding: 60px 20px;
+    }
+
+    .about-content {
+        flex-direction: column;
+        gap: 40px;
+        margin-bottom: 60px;
+    }
+
+    .about-text {
+        text-align: center;
+    }
+
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px;
+    }
+
+    /* Projects Section */
+    .projects-section {
+        padding: 60px 20px;
+    }
+
+    .projects-grid {
+        grid-template-columns: 1fr;
+        max-width: 400px;
+        margin: 0 auto 40px;
+    }
+
+    .project-card {
+        max-width: 100%;
+    }
+
+    /* Skills Section */
+    .skills-section {
+        padding: 60px 20px;
+    }
+
+    .skills-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .skill-card {
+        height: auto;
+        min-height: 200px;
+    }
+
+    /* Footer Section */
+    .footer-section {
+        padding: 60px 20px 40px;
+    }
+
+    .contact-grid {
+        grid-template-columns: 1fr;
+        max-width: 400px;
+        margin: 0 auto 40px;
+    }
+
+    .footer-cta-container {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    .footer-btn {
+        width: 100%;
+        max-width: 300px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .stats-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-title {
+        font-size: 32px;
+    }
 }

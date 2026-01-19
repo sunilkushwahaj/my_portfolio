@@ -23,6 +23,12 @@
                 <a href="#">Skills</a>
                 <a href="#">Contact</a>
             </div>
+            <button id="theme-toggle" aria-label="Toggle Dark Mode">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                </svg>
+            </button>
         </div>
 
     </header>
@@ -272,175 +278,190 @@
         <!-- Skills Section -->
         <section class="skills-section" id="skills">
             <div class="skills-container">
-            <div class="section-title">
-                <h2>Skills & Expertise</h2>
-                <div class="title-underline"></div>
-                <p class="section-subtitle">A comprehensive skill set to bring your product vision to life</p>
-            </div>
-
-            <div class="skills-grid">
-                <!-- Skill 1 -->
-                <div class="skill-card">
-                    <div class="skill-icon">
-                        <svg width="32" height="32" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path
-                                d="M20.1 3.14407C17.6267 2.80554 15.1081 3.08466 12.7689 3.95651C10.4298 4.82836 8.34289 6.26582 6.69453 8.14057C5.28378 9.76535 4.23706 11.6732 3.62466 13.736C3.01227 15.7988 2.84839 17.9687 3.14403 20.1001C3.93903 25.9411 8.33103 30.9106 14.0715 32.4691C15.3512 32.8193 16.6718 32.9978 17.9985 33.0001L18.2115 32.9986C18.9698 32.9888 19.7134 32.7876 20.3732 32.4137C21.033 32.0397 21.5876 31.5052 21.9855 30.8596C22.3848 30.2175 22.6152 29.4849 22.6554 28.7298C22.6955 27.9748 22.544 27.2219 22.215 26.5411L21.9165 25.9171C21.6869 25.4685 21.5791 24.9675 21.6039 24.4642C21.6286 23.9609 21.785 23.473 22.0575 23.0491C22.4474 22.4158 23.0582 21.9494 23.7719 21.7403C24.4856 21.5311 25.2515 21.5939 25.9215 21.9166L26.5395 22.2121C27.1575 22.5091 27.8145 22.6606 28.491 22.6606C29.6749 22.6545 30.8095 22.1855 31.6521 21.3538C32.4947 20.5221 32.9785 19.3938 33 18.2101C33.0186 16.8121 32.8404 15.4184 32.4705 14.0701C30.9105 8.33107 25.941 3.93907 20.1 3.14407ZM27.837 19.5076L27.219 19.2121C24.477 17.8951 21.114 18.9151 19.5165 21.4531C18.4095 23.2171 18.297 25.3171 19.2105 27.2161L19.509 27.8401C19.6209 28.0668 19.6726 28.3184 19.6592 28.5708C19.6458 28.8233 19.5678 29.068 19.4325 29.2816C19.3007 29.4997 19.1151 29.6804 18.8934 29.8062C18.6717 29.932 18.4214 29.9988 18.1665 30.0001H17.9985C16.9369 29.9971 15.8804 29.8544 14.856 29.5756C10.2615 28.3291 6.75153 24.3571 6.11703 19.6966C5.63553 16.1641 6.64503 12.7621 8.95653 10.1131C10.2716 8.60442 11.9431 7.44855 13.8189 6.75064C15.6946 6.05273 17.7151 5.83494 19.6965 6.11707C24.357 6.75157 28.329 10.2631 29.5755 14.8561C29.8725 15.9511 30.015 17.0671 29.9985 18.1666C29.9805 19.3771 28.731 19.9411 27.837 19.5076Z"
-                                fill="white" />
-                            <path
-                                d="M11.25 24C12.4926 24 13.5 22.9926 13.5 21.75C13.5 20.5074 12.4926 19.5 11.25 19.5C10.0074 19.5 9 20.5074 9 21.75C9 22.9926 10.0074 24 11.25 24Z"
-                                fill="white" />
-                            <path
-                                d="M11.25 18C12.4926 18 13.5 16.9926 13.5 15.75C13.5 14.5074 12.4926 13.5 11.25 13.5C10.0074 13.5 9 14.5074 9 15.75C9 16.9926 10.0074 18 11.25 18Z"
-                                fill="white" />
-                            <path
-                                d="M15.75 13.5C16.9926 13.5 18 12.4926 18 11.25C18 10.0074 16.9926 9 15.75 9C14.5074 9 13.5 10.0074 13.5 11.25C13.5 12.4926 14.5074 13.5 15.75 13.5Z"
-                                fill="white" />
-                            <path
-                                d="M21.75 13.5C22.9926 13.5 24 12.4926 24 11.25C24 10.0074 22.9926 9 21.75 9C20.5074 9 19.5 10.0074 19.5 11.25C19.5 12.4926 20.5074 13.5 21.75 13.5Z"
-                                fill="white" />
-                        </svg>
-
-                    </div>
-                    <h3>Visual Design</h3>
-                    <p class="skill-desc-short">Creating beautiful cohesive designs with attention to typography, color,
-                        and composition</p>
-                    <p class="skill-desc-long">Creating visually appealing designs using color, typography, spacing, and
-                        imagery. Focused on delivering clear, modern, and consistent layouts that support brand
-                        identity. Ensures every visual element communicates purpose and enhances the overall user
-                        experience</p>
-                    <div class="skill-tags">
-                        <span>Figma</span>
-                        <span>Adobe XD</span>
-                        <span>Sketch</span>
-                        <span>Illustrator</span>
-                    </div>
+                <div class="section-title">
+                    <h2>Skills & Expertise</h2>
+                    <div class="title-underline"></div>
+                    <p class="section-subtitle">A comprehensive skill set to bring your product vision to life</p>
                 </div>
 
-                <!-- Skill 2 -->
-                <div class="skill-card">
-                    <div class="skill-icon">
-                        <svg width="32" height="32" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path
-                                d="M30 4.5H6C4.3455 4.5 3 5.8455 3 7.5V28.5C3 30.1545 4.3455 31.5 6 31.5H30C31.6545 31.5 33 30.1545 33 28.5V7.5C33 5.8455 31.6545 4.5 30 4.5ZM30 7.5L30.0015 13.5H6V7.5H30ZM6 28.5V16.5H30.0015L30.003 28.5H6Z"
-                                fill="white" />
-                            <path d="M21 9H24V12H21V9ZM25.5 9H28.5V12H25.5V9Z" fill="white" />
-                        </svg>
+                <div class="skills-grid">
+                    <!-- Skill 1 -->
+                    <div class="skill-card">
+                        <div class="skill-icon">
+                            <svg width="32" height="32" viewBox="0 0 36 36" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M20.1 3.14407C17.6267 2.80554 15.1081 3.08466 12.7689 3.95651C10.4298 4.82836 8.34289 6.26582 6.69453 8.14057C5.28378 9.76535 4.23706 11.6732 3.62466 13.736C3.01227 15.7988 2.84839 17.9687 3.14403 20.1001C3.93903 25.9411 8.33103 30.9106 14.0715 32.4691C15.3512 32.8193 16.6718 32.9978 17.9985 33.0001L18.2115 32.9986C18.9698 32.9888 19.7134 32.7876 20.3732 32.4137C21.033 32.0397 21.5876 31.5052 21.9855 30.8596C22.3848 30.2175 22.6152 29.4849 22.6554 28.7298C22.6955 27.9748 22.544 27.2219 22.215 26.5411L21.9165 25.9171C21.6869 25.4685 21.5791 24.9675 21.6039 24.4642C21.6286 23.9609 21.785 23.473 22.0575 23.0491C22.4474 22.4158 23.0582 21.9494 23.7719 21.7403C24.4856 21.5311 25.2515 21.5939 25.9215 21.9166L26.5395 22.2121C27.1575 22.5091 27.8145 22.6606 28.491 22.6606C29.6749 22.6545 30.8095 22.1855 31.6521 21.3538C32.4947 20.5221 32.9785 19.3938 33 18.2101C33.0186 16.8121 32.8404 15.4184 32.4705 14.0701C30.9105 8.33107 25.941 3.93907 20.1 3.14407ZM27.837 19.5076L27.219 19.2121C24.477 17.8951 21.114 18.9151 19.5165 21.4531C18.4095 23.2171 18.297 25.3171 19.2105 27.2161L19.509 27.8401C19.6209 28.0668 19.6726 28.3184 19.6592 28.5708C19.6458 28.8233 19.5678 29.068 19.4325 29.2816C19.3007 29.4997 19.1151 29.6804 18.8934 29.8062C18.6717 29.932 18.4214 29.9988 18.1665 30.0001H17.9985C16.9369 29.9971 15.8804 29.8544 14.856 29.5756C10.2615 28.3291 6.75153 24.3571 6.11703 19.6966C5.63553 16.1641 6.64503 12.7621 8.95653 10.1131C10.2716 8.60442 11.9431 7.44855 13.8189 6.75064C15.6946 6.05273 17.7151 5.83494 19.6965 6.11707C24.357 6.75157 28.329 10.2631 29.5755 14.8561C29.8725 15.9511 30.015 17.0671 29.9985 18.1666C29.9805 19.3771 28.731 19.9411 27.837 19.5076Z"
+                                    fill="white" />
+                                <path
+                                    d="M11.25 24C12.4926 24 13.5 22.9926 13.5 21.75C13.5 20.5074 12.4926 19.5 11.25 19.5C10.0074 19.5 9 20.5074 9 21.75C9 22.9926 10.0074 24 11.25 24Z"
+                                    fill="white" />
+                                <path
+                                    d="M11.25 18C12.4926 18 13.5 16.9926 13.5 15.75C13.5 14.5074 12.4926 13.5 11.25 13.5C10.0074 13.5 9 14.5074 9 15.75C9 16.9926 10.0074 18 11.25 18Z"
+                                    fill="white" />
+                                <path
+                                    d="M15.75 13.5C16.9926 13.5 18 12.4926 18 11.25C18 10.0074 16.9926 9 15.75 9C14.5074 9 13.5 10.0074 13.5 11.25C13.5 12.4926 14.5074 13.5 15.75 13.5Z"
+                                    fill="white" />
+                                <path
+                                    d="M21.75 13.5C22.9926 13.5 24 12.4926 24 11.25C24 10.0074 22.9926 9 21.75 9C20.5074 9 19.5 10.0074 19.5 11.25C19.5 12.4926 20.5074 13.5 21.75 13.5Z"
+                                    fill="white" />
+                            </svg>
 
+                        </div>
+                        <h3>Visual Design</h3>
+                        <p class="skill-desc-short">Creating beautiful cohesive designs with attention to typography,
+                            color,
+                            and composition</p>
+                        <p class="skill-desc-long">Creating visually appealing designs using color, typography, spacing,
+                            and
+                            imagery. Focused on delivering clear, modern, and consistent layouts that support brand
+                            identity. Ensures every visual element communicates purpose and enhances the overall user
+                            experience</p>
+                        <div class="skill-tags">
+                            <span>Figma</span>
+                            <span>Adobe XD</span>
+                            <span>Sketch</span>
+                            <span>Illustrator</span>
+                        </div>
                     </div>
-                    <h3>UI Design</h3>
-                    <p class="skill-desc-short">Designing intuitive interfaces that balance aesthetics with
-                        functionality</p>
-                    <p class="skill-desc-long">Designing intuitive and user-friendly interfaces that make navigation
-                        effortless. Ensuring consistent components, accessible interactions, and clean layouts across
-                        the product. Aims to create interfaces that look polished and feel natural to use</p>
-                    <div class="skill-tags">
-                        <span>Design Systems</span>
-                        <span>Responsive Design</span>
-                        <span>Component Libraries</span>
+
+                    <!-- Skill 2 -->
+                    <div class="skill-card">
+                        <div class="skill-icon">
+                            <svg width="32" height="32" viewBox="0 0 36 36" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M30 4.5H6C4.3455 4.5 3 5.8455 3 7.5V28.5C3 30.1545 4.3455 31.5 6 31.5H30C31.6545 31.5 33 30.1545 33 28.5V7.5C33 5.8455 31.6545 4.5 30 4.5ZM30 7.5L30.0015 13.5H6V7.5H30ZM6 28.5V16.5H30.0015L30.003 28.5H6Z"
+                                    fill="white" />
+                                <path d="M21 9H24V12H21V9ZM25.5 9H28.5V12H25.5V9Z" fill="white" />
+                            </svg>
+
+                        </div>
+                        <h3>UI Design</h3>
+                        <p class="skill-desc-short">Designing intuitive interfaces that balance aesthetics with
+                            functionality</p>
+                        <p class="skill-desc-long">Designing intuitive and user-friendly interfaces that make navigation
+                            effortless. Ensuring consistent components, accessible interactions, and clean layouts
+                            across
+                            the product. Aims to create interfaces that look polished and feel natural to use</p>
+                        <div class="skill-tags">
+                            <span>Design Systems</span>
+                            <span>Responsive Design</span>
+                            <span>Component Libraries</span>
+                        </div>
+                    </div>
+
+                    <!-- Skill 3 -->
+                    <div class="skill-card">
+                        <div class="skill-icon">
+                            <svg width="32" height="32" viewBox="0 0 36 36" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M25.125 3H10.125C8.4705 3 7.125 4.3455 7.125 6V30C7.125 31.6545 8.4705 33 10.125 33H25.125C26.7795 33 28.125 31.6545 28.125 30V6C28.125 4.3455 26.7795 3 25.125 3ZM10.125 30V6H25.125L25.128 30H10.125Z"
+                                    fill="white" />
+                                <path
+                                    d="M17.625 28.5C18.4534 28.5 19.125 27.8284 19.125 27C19.125 26.1716 18.4534 25.5 17.625 25.5C16.7966 25.5 16.125 26.1716 16.125 27C16.125 27.8284 16.7966 28.5 17.625 28.5Z"
+                                    fill="white" />
+                            </svg>
+
+                        </div>
+                        <h3>UX Research</h3>
+                        <p class="skill-desc-short">Understanding user needs through research, testing, and data
+                            analytics
+                        </p>
+                        <p class="skill-desc-long">Understanding user needs, goals, and pain points through interviews,
+                            surveys, and usability testing. Using data and insights to guide design decisions and
+                            improve
+                            product effectiveness. Helps ensure every feature is grounded in real user behavior</p>
+                        <div class="skill-tags">
+                            <span>User Interviews</span>
+                            <span>Usability Test</span>
+                            <span>Analytics</span>
+                            <span>QA Testing</span>
+                        </div>
+                    </div>
+
+                    <!-- Skill 4 -->
+                    <div class="skill-card">
+                        <div class="skill-icon">
+                            <svg width="32" height="32" viewBox="0 0 36 36" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M12.4395 9.43945L3.879 18L12.4395 26.5605L14.5605 24.4395L8.121 18L14.5605 11.5605L12.4395 9.43945ZM23.5605 26.5605L32.121 18L23.5605 9.43945L21.4395 11.5605L27.879 18L21.4395 24.4395L23.5605 26.5605Z"
+                                    fill="white" />
+                            </svg>
+
+                        </div>
+                        <h3>Prototyping</h3>
+                        <p class="skill-desc-short">Building interface prototypes to validate ideas and communicate
+                            design
+                            intent</p>
+                        <p class="skill-desc-long">Turning concepts into interactive mockups to visualize and test user
+                            flows. Helps identify issues early and refine ideas before development. Allows teams to
+                            explore
+                            different solutions quickly and confidently</p>
+                        <div class="skill-tags">
+                            <span>Figma</span>
+                            <span>ProtoPie</span>
+                            <span>Framer</span>
+                            <span>HTML/CSS</span>
+                        </div>
+                    </div>
+
+                    <!-- Skill 5 -->
+                    <div class="skill-card">
+                        <div class="skill-icon">
+                            <svg width="32" height="32" viewBox="0 0 36 36" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M30 9H25.5V6C25.5 4.3455 24.1545 3 22.5 3H13.5C11.8455 3 10.5 4.3455 10.5 6V9H6C4.3455 9 3 10.3455 3 12V28.5C3 30.1545 4.3455 31.5 6 31.5H30C31.6545 31.5 33 30.1545 33 28.5V12C33 10.3455 31.6545 9 30 9ZM22.5 6V9H13.5V6H22.5ZM30 12V16.5H6V12H30ZM6 28.5V19.5H15V22.5H21V19.5H30L30.0015 28.5H6Z"
+                                    fill="white" />
+                            </svg>
+
+                        </div>
+                        <h3>Design Systems</h3>
+                        <p class="skill-desc-short">Creating scalable design systems that maintain consistency across
+                            products</p>
+                        <p class="skill-desc-long">Building a unified library of components, patterns, and guidelines to
+                            ensure consistency across all products. Improves design speed, quality, and collaboration.
+                            Supports scalable growth as the product evolves and expands</p>
+                        <div class="skill-tags">
+                            <span>Token Management</span>
+                            <span>Documentation</span>
+                            <span>Component Architecture</span>
+                        </div>
+                    </div>
+
+                    <!-- Skill 6 -->
+                    <div class="skill-card">
+                        <div class="skill-icon">
+                            <svg width="32" height="32" viewBox="0 0 36 36" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M24.906 16.572C25.8196 15.0151 26.2141 13.2079 26.0325 11.412C25.764 8.73595 24.27 6.37045 21.828 4.75195L20.1705 7.25095C21.849 8.36395 22.8705 9.94945 23.0475 11.712C23.1291 12.5311 23.0272 13.3581 22.749 14.1329C22.4708 14.9077 22.0235 15.6108 21.4395 16.191L19.6515 17.979L22.0785 18.6915C28.4265 20.5515 28.5 26.9355 28.5 27H31.5C31.5 24.3165 30.066 19.0725 24.906 16.572Z"
+                                    fill="white" />
+                                <path
+                                    d="M14.25 18C17.559 18 20.25 15.309 20.25 12C20.25 8.691 17.559 6 14.25 6C10.941 6 8.25 8.691 8.25 12C8.25 15.309 10.941 18 14.25 18ZM14.25 9C15.9045 9 17.25 10.3455 17.25 12C17.25 13.6545 15.9045 15 14.25 15C12.5955 15 11.25 13.6545 11.25 12C11.25 10.3455 12.5955 9 14.25 9ZM16.5 19.5H12C7.0365 19.5 3 23.5365 3 28.5V30H6V28.5C6 25.191 8.691 22.5 12 22.5H16.5C19.809 22.5 22.5 25.191 22.5 28.5V30H25.5V28.5C25.5 23.5365 21.4635 19.5 16.5 19.5Z"
+                                    fill="white" />
+                            </svg>
+
+                        </div>
+                        <h3>Collaboration</h3>
+                        <p class="skill-desc-short">Working closely with developers, product managers, and stakeholders
+                        </p>
+                        <p class="skill-desc-long">Creating visually appealing designs using color, typography, spacing,
+                            and
+                            imagery. Focused on delivering clear, modern, and consistent layouts that support brand
+                            identity. Ensures every visual element communicates purpose and enhances the overall user
+                            experience</p>
+                        <div class="skill-tags">
+                            <span>Agile/Scrum</span>
+                            <span>Workshops</span>
+                            <span>Presentations</span>
+                            <span>Design Handoff</span>
+                        </div>
                     </div>
                 </div>
-
-                <!-- Skill 3 -->
-                <div class="skill-card">
-                    <div class="skill-icon">
-                        <svg width="32" height="32" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path
-                                d="M25.125 3H10.125C8.4705 3 7.125 4.3455 7.125 6V30C7.125 31.6545 8.4705 33 10.125 33H25.125C26.7795 33 28.125 31.6545 28.125 30V6C28.125 4.3455 26.7795 3 25.125 3ZM10.125 30V6H25.125L25.128 30H10.125Z"
-                                fill="white" />
-                            <path
-                                d="M17.625 28.5C18.4534 28.5 19.125 27.8284 19.125 27C19.125 26.1716 18.4534 25.5 17.625 25.5C16.7966 25.5 16.125 26.1716 16.125 27C16.125 27.8284 16.7966 28.5 17.625 28.5Z"
-                                fill="white" />
-                        </svg>
-
-                    </div>
-                    <h3>UX Research</h3>
-                    <p class="skill-desc-short">Understanding user needs through research, testing, and data analytics
-                    </p>
-                    <p class="skill-desc-long">Understanding user needs, goals, and pain points through interviews,
-                        surveys, and usability testing. Using data and insights to guide design decisions and improve
-                        product effectiveness. Helps ensure every feature is grounded in real user behavior</p>
-                    <div class="skill-tags">
-                        <span>User Interviews</span>
-                        <span>Usability Test</span>
-                        <span>Analytics</span>
-                        <span>QA Testing</span>
-                    </div>
-                </div>
-
-                <!-- Skill 4 -->
-                <div class="skill-card">
-                    <div class="skill-icon">
-                        <svg width="32" height="32" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path
-                                d="M12.4395 9.43945L3.879 18L12.4395 26.5605L14.5605 24.4395L8.121 18L14.5605 11.5605L12.4395 9.43945ZM23.5605 26.5605L32.121 18L23.5605 9.43945L21.4395 11.5605L27.879 18L21.4395 24.4395L23.5605 26.5605Z"
-                                fill="white" />
-                        </svg>
-
-                    </div>
-                    <h3>Prototyping</h3>
-                    <p class="skill-desc-short">Building interface prototypes to validate ideas and communicate design
-                        intent</p>
-                    <p class="skill-desc-long">Turning concepts into interactive mockups to visualize and test user
-                        flows. Helps identify issues early and refine ideas before development. Allows teams to explore
-                        different solutions quickly and confidently</p>
-                    <div class="skill-tags">
-                        <span>Figma</span>
-                        <span>ProtoPie</span>
-                        <span>Framer</span>
-                        <span>HTML/CSS</span>
-                    </div>
-                </div>
-
-                <!-- Skill 5 -->
-                <div class="skill-card">
-                    <div class="skill-icon">
-                        <svg width="32" height="32" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path
-                                d="M30 9H25.5V6C25.5 4.3455 24.1545 3 22.5 3H13.5C11.8455 3 10.5 4.3455 10.5 6V9H6C4.3455 9 3 10.3455 3 12V28.5C3 30.1545 4.3455 31.5 6 31.5H30C31.6545 31.5 33 30.1545 33 28.5V12C33 10.3455 31.6545 9 30 9ZM22.5 6V9H13.5V6H22.5ZM30 12V16.5H6V12H30ZM6 28.5V19.5H15V22.5H21V19.5H30L30.0015 28.5H6Z"
-                                fill="white" />
-                        </svg>
-
-                    </div>
-                    <h3>Design Systems</h3>
-                    <p class="skill-desc-short">Creating scalable design systems that maintain consistency across
-                        products</p>
-                    <p class="skill-desc-long">Building a unified library of components, patterns, and guidelines to
-                        ensure consistency across all products. Improves design speed, quality, and collaboration.
-                        Supports scalable growth as the product evolves and expands</p>
-                    <div class="skill-tags">
-                        <span>Token Management</span>
-                        <span>Documentation</span>
-                        <span>Component Architecture</span>
-                    </div>
-                </div>
-
-                <!-- Skill 6 -->
-                <div class="skill-card">
-                    <div class="skill-icon">
-                        <svg width="32" height="32" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path
-                                d="M24.906 16.572C25.8196 15.0151 26.2141 13.2079 26.0325 11.412C25.764 8.73595 24.27 6.37045 21.828 4.75195L20.1705 7.25095C21.849 8.36395 22.8705 9.94945 23.0475 11.712C23.1291 12.5311 23.0272 13.3581 22.749 14.1329C22.4708 14.9077 22.0235 15.6108 21.4395 16.191L19.6515 17.979L22.0785 18.6915C28.4265 20.5515 28.5 26.9355 28.5 27H31.5C31.5 24.3165 30.066 19.0725 24.906 16.572Z"
-                                fill="white" />
-                            <path
-                                d="M14.25 18C17.559 18 20.25 15.309 20.25 12C20.25 8.691 17.559 6 14.25 6C10.941 6 8.25 8.691 8.25 12C8.25 15.309 10.941 18 14.25 18ZM14.25 9C15.9045 9 17.25 10.3455 17.25 12C17.25 13.6545 15.9045 15 14.25 15C12.5955 15 11.25 13.6545 11.25 12C11.25 10.3455 12.5955 9 14.25 9ZM16.5 19.5H12C7.0365 19.5 3 23.5365 3 28.5V30H6V28.5C6 25.191 8.691 22.5 12 22.5H16.5C19.809 22.5 22.5 25.191 22.5 28.5V30H25.5V28.5C25.5 23.5365 21.4635 19.5 16.5 19.5Z"
-                                fill="white" />
-                        </svg>
-
-                    </div>
-                    <h3>Collaboration</h3>
-                    <p class="skill-desc-short">Working closely with developers, product managers, and stakeholders</p>
-                    <p class="skill-desc-long">Creating visually appealing designs using color, typography, spacing, and
-                        imagery. Focused on delivering clear, modern, and consistent layouts that support brand
-                        identity. Ensures every visual element communicates purpose and enhances the overall user
-                        experience</p>
-                    <div class="skill-tags">
-                        <span>Agile/Scrum</span>
-                        <span>Workshops</span>
-                        <span>Presentations</span>
-                        <span>Design Handoff</span>
-                    </div>
-                </div>
-            </div>
             </div>
         </section>
     </main>
@@ -533,7 +554,7 @@
         </div>
     </footer>
 
+    <script src="script.js"></script>
 </body>
 
->>>>>>> 8c8dfe6 (feat: Implement initial portfolio website structure, styling, and assets for landing, hero, about, skills, and projects sections.)
 </html>
