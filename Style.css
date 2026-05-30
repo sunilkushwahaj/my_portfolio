@@ -47,6 +47,49 @@
     --nav-shadow: 0 1px 2px rgba(255, 255, 255, 0.05);
 }
 
+/* Dark Mode Component Overrides */
+[data-theme="dark"] .status-badge {
+    background-color: #1F2933;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
+    border: none;
+}
+
+[data-theme="dark"] .status-text {
+    color: #D2D4D8;
+}
+
+[data-theme="dark"] .hero-actions .btn-primary {
+    background: #17181A;
+    color: #D2D4D8;
+    border: 1px solid rgba(88, 88, 99, 0.4);
+    height: 36px;
+}
+
+[data-theme="dark"] .hero-actions .btn-primary::before {
+    background-color: #3B82F6;
+}
+
+[data-theme="dark"] .hero-actions .btn-primary:hover {
+    color: #FFFFFF;
+    border-color: #3B82F6;
+}
+
+[data-theme="dark"] .hero-actions .btn-outline {
+    background: #D2D4D8;
+    color: #18212F;
+    border: 1px solid #1E293B;
+    height: 36px;
+}
+
+[data-theme="dark"] .hero-actions .btn-outline::before {
+    background-color: #3B82F6;
+}
+
+[data-theme="dark"] .hero-actions .btn-outline:hover {
+    color: #FFFFFF;
+    border-color: #3B82F6;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -123,7 +166,29 @@ h6 {
     background-position: center;
     height: 40px;
     width: 50px;
-    /* Adjusted to fit aspect ratio better if needed, or keep 42 */
+    position: relative;
+}
+.dark-logo {
+    display: none;
+}
+
+/* Custom logo when user switches to dark mode */
+[data-theme="dark"] .logo {
+    background-image: none;
+    margin: 0 auto;
+    width: 42px;
+    height: 40px;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+[data-theme="dark"] .dark-logo {
+    display: block;
 }
 
 .nav-links {
@@ -175,6 +240,7 @@ h6 {
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
     border-radius: 99px;
     margin-bottom: 24px;
+    transition: background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 .status-dot {
@@ -200,6 +266,7 @@ h6 {
     flex: none;
     order: 1;
     flex-grow: 0;
+    transition: color 0.3s ease;
 }
 
 .status-icon {
@@ -268,6 +335,7 @@ h6 {
     isolation: isolate;
     transition: all 0.3s ease;
     box-sizing: border-box;
+    white-space: nowrap;
 }
 
 /* Primary Button: Expand from Center (Scale) */
@@ -462,7 +530,8 @@ h6 {
 
 /* Hover State */
 .about-logo-circle:hover {
-    background: linear-gradient(282.12deg, #3EB7ED 6.94%, #3B82F6 93.06%);
+    background: transparent;
+    box-shadow: none;
 }
 
 .about-logo-circle:hover::after {
