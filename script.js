@@ -25,4 +25,49 @@ document.addEventListener('DOMContentLoaded', () => {
         }
         localStorage.setItem('theme', theme);
     });
+
+    // View All Projects Modal Trigger Logic
+    const viewAllBtn = document.getElementById('view-all-projects-btn');
+    const modal = document.getElementById('projects-modal');
+    const closeBtn = document.getElementById('modal-close-btn');
+    const okBtn = document.getElementById('modal-ok-btn');
+
+    if (viewAllBtn && modal) {
+        const openModal = () => {
+            modal.classList.add('active');
+            document.body.classList.add('modal-open');
+        };
+
+        const closeModal = () => {
+            modal.classList.remove('active');
+            document.body.classList.remove('modal-open');
+        };
+
+        viewAllBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            openModal();
+        });
+
+        if (closeBtn) {
+            closeBtn.addEventListener('click', closeModal);
+        }
+
+        if (okBtn) {
+            okBtn.addEventListener('click', closeModal);
+        }
+
+        // Close modal when clicking outside of the content box
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                closeModal();
+            }
+        });
+
+        // Close modal when pressing the Escape key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && modal.classList.contains('active')) {
+                closeModal();
+            }
+        });
+    }
 });
