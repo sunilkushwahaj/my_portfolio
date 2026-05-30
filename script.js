@@ -70,4 +70,28 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     }
+
+    // Mobile Hamburger Menu Trigger Logic
+    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+    const navLinks = document.querySelector('.nav-links');
+    const menuLinks = document.querySelectorAll('.nav-links a');
+
+    if (mobileMenuBtn && navLinks) {
+        const toggleMenu = () => {
+            mobileMenuBtn.classList.toggle('active');
+            navLinks.classList.toggle('active');
+        };
+
+        const closeMenu = () => {
+            mobileMenuBtn.classList.remove('active');
+            navLinks.classList.remove('active');
+        };
+
+        mobileMenuBtn.addEventListener('click', toggleMenu);
+
+        // Close mobile menu when links are clicked (for scrolling context)
+        menuLinks.forEach(link => {
+            link.addEventListener('click', closeMenu);
+        });
+    }
 });
